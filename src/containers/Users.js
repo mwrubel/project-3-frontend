@@ -17,8 +17,6 @@ const Users = () => {
 
   const handleSubmit = (e) => {
     console.log("setting name: " + newUser);
-    //UPDATE USERES ARRAY WITH AN ADDED USER TO END
-    
 
     e.preventDefault();
     //POST NEW USER TO BACKEND

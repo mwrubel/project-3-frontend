@@ -6,7 +6,7 @@ const GameResult = () => {
   //false=lost game, true=win
   //const [result, setResult] = useState(false);
   //const params = useParams();
-  console.log("GAME RESULT");
+  console.log("GAME RESULT: " );
   /**USE EFFECT?? */
 
   //post game result to backend

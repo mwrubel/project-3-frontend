@@ -1,12 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { Button } from "semantic-ui-react";
 
 const UserLink = ({ user }) => {
+  
+
   return (
     <div>
       <Link to={"/users/" + user.id}>
         <h3>{user.name}</h3>
       </Link>
+      <br></br>
       Bankroll: {user.money}
       <br></br>
       User's wins: {user.wins}
