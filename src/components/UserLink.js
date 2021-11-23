@@ -1,9 +1,7 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { Button } from "semantic-ui-react";
+import { Link} from "react-router-dom";
 
 const UserLink = ({ user }) => {
-  
 
   return (
     <div>
@@ -13,11 +11,11 @@ const UserLink = ({ user }) => {
       <br></br>
       Bankroll: {user.money}
       <br></br>
-      User's wins: {user.wins}
+      User's total games: 
+      {user.games?.length}
       <br></br>
-      User's total games: {user.total_games}
-      <br></br>
-      User win %: {(user.wins / user.total_games) * 100}
+      User win %: {(user.games?.filter(g => g.won_game)?.length / user.games?.length) * 100}
+      {/* Round to 2 decimals */}
     </div>
   );
 };

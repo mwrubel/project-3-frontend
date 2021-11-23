@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import UserLink from "../components/UserLink";
-import { Button } from "semantic-ui-react";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
@@ -10,13 +9,11 @@ const Users = () => {
     fetch("http://localhost:9292/users")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setUsers(data);
       });
   }, []);
 
   const handleSubmit = (e) => {
-    console.log("setting name: " + newUser);
 
     e.preventDefault();
     //POST NEW USER TO BACKEND
@@ -27,9 +24,7 @@ const Users = () => {
       },
       body: JSON.stringify({
         name: newUser,
-        money: 1000,
-        wins: 0,
-        total_games: 0,
+        money: 1000
       }),
     }).then((r) => r.json())
     .then(data => {
@@ -38,12 +33,6 @@ const Users = () => {
       data
     ])
     })
-  };
-
-  const handleRemoveUser = (e) => {
-    //need to object remove from users array
-    console.log("params: " + e);
-    console.log("params id: " + e.id);
   };
 
   //USER LIST, SENT TO USERLINK (CREATES CLICKABLE LINK FOR EACH USER)

@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import Users from "./containers/Users";
 import User from "./containers/User";
 import Game from "./components/Game";
+
 function App() {
   return (
     <Router>
@@ -13,7 +14,7 @@ function App() {
       <div className="App">
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route exact path="/GamePage" element={<Game />} />
+          <Route exact path="/games" element={<Game />} />
           <Route exact path="/users" element={<Users />} />
           <Route path="/users/:id" element={<User />} />
         </Routes>

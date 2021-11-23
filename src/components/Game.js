@@ -1,11 +1,10 @@
 import React from "react";
 
-const Game = ({ game }) => {
-  console.log(game);
+const Game = (props) => {
+
   return (
     <div>
-      <h3>{game}</h3>
-      {/* <h3>{game.games}</h3> */}
+      {props.game.won_game ? "Win" : "Loss"}
     </div>
   );
 };
